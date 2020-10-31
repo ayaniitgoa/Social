@@ -3,10 +3,11 @@ import './SiteContainer.css';
 import { loadUser } from '../../reduxSetup/actions/authActions';
 import store from '../../reduxSetup/store';
 import AuthPage from '../AuthPage/AuthPage';
-import { Route, Switch } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
 import Profile from '../Profile/Profile';
 import PrivateRoute from '../../PrivateRoute';
 import Home from '../Home/Home';
+import Logout from '../../components/Auth/Logout/Logout';
 
 function SiteContainer() {
   useEffect(() => {

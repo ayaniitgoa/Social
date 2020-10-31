@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import Logout from '../../components/Auth/Logout/Logout';
+import Navbar from '../../components/Navbar/Navbar';
 import ProfilePicUpdate from '../../components/ProfilePicUpdate/ProfilePicUpdate';
 import UpdateTag from '../../components/UpdateTag/UpdateTag';
 import { getTags } from '../../reduxSetup/actions/tagsActions';
@@ -17,6 +18,7 @@ function Profile(props) {
 
   return (
     <div>
+      <Navbar />
       {props.auth.isAuthenticated && (
         <div className=''>
           <img

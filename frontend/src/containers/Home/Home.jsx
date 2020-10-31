@@ -5,6 +5,7 @@ import FriendsTab from '../../components/MiddleSection/Friends/FriendsTab';
 import SettingsTab from '../../components/MiddleSection/Settings/SettingsTab';
 import LeftSection from '../../components/LeftSection/LeftSection';
 import './Home.css';
+import Navbar from '../../components/Navbar/Navbar';
 function Home() {
   const [activeTab1, setActiveTab1] = useState(true);
   const [activeTab2, setActiveTab2] = useState(false);
@@ -12,6 +13,14 @@ function Home() {
 
   return (
     <div>
+      <Navbar
+        activeTab1={activeTab1}
+        activeTab2={activeTab2}
+        activeTab3={activeTab3}
+        setActiveTab1={setActiveTab1}
+        setActiveTab2={setActiveTab2}
+        setActiveTab3={setActiveTab3}
+      />
       <button
         onClick={() => {
           setActiveTab2(false);

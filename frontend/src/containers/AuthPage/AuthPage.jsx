@@ -3,13 +3,17 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Register from '../../components/Auth/Register/Register';
 import Login from '../../components/Auth/Login/Login';
-import { withRouter } from 'react-router-dom';
+import { Redirect, withRouter } from 'react-router-dom';
 
 function AuthPage(props) {
   return (
     <div>
       {localStorage.getItem('token') ? (
-        props.history.goBack()
+        props.location.pathname !== '/' ? (
+          <Redirect to='/profile' />
+        ) : (
+          props.history.goBack()
+        )
       ) : (
         <div className=''>
           <Register />
