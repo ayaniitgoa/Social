@@ -9,11 +9,7 @@ function AuthPage(props) {
   return (
     <div>
       {localStorage.getItem('token') ? (
-        props.location.pathname !== '/' ? (
-          <Redirect to='/profile' />
-        ) : (
-          props.history.goBack()
-        )
+        <Redirect to='/profile' />
       ) : (
         <div className=''>
           <Register />
