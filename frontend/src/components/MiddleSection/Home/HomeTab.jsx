@@ -4,7 +4,7 @@ import './HomeTab.css';
 function HomeTab() {
   return (
     <div>
-      <h1>Home Tab</h1>
+      <h1> Home Tab</h1>
     </div>
   );
 }

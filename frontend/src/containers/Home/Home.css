@@ -4,3 +4,16 @@
 .mid {
   border-right: 1px solid black;
 }
+
+.tab-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-button {
+  padding: 10px 20px;
+}
+
+.tab-icon {
+  margin-right: 25px;
+}

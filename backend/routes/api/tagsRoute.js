@@ -10,6 +10,10 @@ router.get('/', auth, TagsController.getAllTags);
 
 router.post('/selectedtags/:id', auth, TagsController.selectedTags);
 
+// @route POST api/tags/delete/:id
+// @desc delete tags
+// @access Private
+
 router.post('/delete/:id', auth, TagsController.deleteTags);
 
 module.exports = router;

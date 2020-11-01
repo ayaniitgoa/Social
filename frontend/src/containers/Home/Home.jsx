@@ -21,35 +21,45 @@ function Home() {
         setActiveTab2={setActiveTab2}
         setActiveTab3={setActiveTab3}
       />
-      <button
-        onClick={() => {
-          setActiveTab2(false);
-          setActiveTab3(false);
-          setActiveTab1(true);
-        }}
-      >
-        Home
-      </button>
-      <button
-        onClick={() => {
-          setActiveTab1(false);
-          setActiveTab3(false);
-          setActiveTab2(true);
-        }}
-      >
-        {' '}
-        Friends
-      </button>
-      <button
-        onClick={() => {
-          setActiveTab1(false);
-          setActiveTab2(false);
-          setActiveTab3(true);
-        }}
-      >
-        {' '}
-        Settings
-      </button>
+      <div className='row'>
+        <div className='col'></div>
+        <div className='col-6 tab-buttons'>
+          <button
+            onClick={() => {
+              setActiveTab2(false);
+              setActiveTab3(false);
+              setActiveTab1(true);
+            }}
+            className='tab-button'
+          >
+            <i className='fas fa-home tab-icon'></i>
+            Home
+          </button>
+          <button
+            onClick={() => {
+              setActiveTab1(false);
+              setActiveTab3(false);
+              setActiveTab2(true);
+            }}
+            className='tab-button'
+          >
+            <i className='fas fa-user-friends tab-icon'></i>
+            Friends
+          </button>
+          <button
+            onClick={() => {
+              setActiveTab1(false);
+              setActiveTab2(false);
+              setActiveTab3(true);
+            }}
+            className='tab-button'
+          >
+            <i className='fas fa-cog tab-icon'></i>
+            Settings
+          </button>
+        </div>
+        <div className='col'></div>
+      </div>
       <div className='tabs-section-all'>
         <div className='row'>
           <div className='left col'>

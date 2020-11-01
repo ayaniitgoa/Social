@@ -5,7 +5,7 @@ import Register from '../../components/Auth/Register/Register';
 import Login from '../../components/Auth/Login/Login';
 import { Redirect, withRouter } from 'react-router-dom';
 
-function AuthPage(props) {
+function AuthPage() {
   return (
     <div>
       {localStorage.getItem('token') ? (
